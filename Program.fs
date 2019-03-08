@@ -105,8 +105,8 @@ let main argv =
   printfn ""
   printfn "# of riders: %A" N
   printfn ""
-  printfn "%% of riders indentifying as male: %A (%A%%)" numOfMales ((float (numOfMales*100))/float N)
-  printfn "%% of riders indentifying as female: %A (%A%%)" numOfFemales ((float (numOfFemales*100))/float N)
+  printfn "%% of riders identifying as male: %A (%A%%)" numOfMales ((float (numOfMales*100))/float N)
+  printfn "%% of riders identifying as female: %A (%A%%)" numOfFemales ((float (numOfFemales*100))/float N)
   printfn ""
   printfn "Average age: %A" ( (float (totalge) )/float (N-zeros))
   printfn "** Ride Durations:" 
