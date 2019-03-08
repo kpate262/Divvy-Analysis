@@ -74,7 +74,7 @@ let rec outterList list gender age z sec hour =
 let rec hourlyRides list i =
     if i = 24 then 0
     else let counter = outterList list -1 -1 -1 -1 i
-         printf "%A: " i
+         printf " %A: " i
          printstars (counter/10)
          printfn "%A" counter
          hourlyRides list (i+1)
