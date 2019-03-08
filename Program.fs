@@ -2,7 +2,7 @@
 //
 // F# program to analyze Divvy daily ride data.
 //
-// << YOUR NAME HERE >>
+// <<Kisan Patel>>
 // U. of Illinois, Chicago
 // CS 341, Spring 2019
 // Project #04
@@ -48,7 +48,6 @@ let rec printstars n =
            printstars (n-1)
 
 
-
 let rec eachRider list counter gender age z sec hour = 
     match list with
     | [] -> 0
@@ -63,12 +62,10 @@ let rec eachRider list counter gender age z sec hour =
     | e::tail -> eachRider tail (counter+1) gender age z sec hour
 
 
-
 let rec outterList list gender age z sec hour =
     match list with
     | [] -> 0
     | e::tail -> (eachRider e 0 gender age z sec hour) + outterList tail gender age z sec hour
-
 
 
 let rec hourlyRides list i =
@@ -82,10 +79,6 @@ let rec hourlyRides list i =
     
 [<EntryPoint>]
 let main argv =
-  //
-  // input file name, then input divvy ride data and build
-  // a list of lists:
-  //
   printf "filename> "
   let filename = System.Console.ReadLine()
   let contents = System.IO.File.ReadLines(filename)
@@ -119,5 +112,4 @@ let main argv =
   printfn ""
   printfn "** Ride Start Time Histogram:"
   hourlyRides ridedata 0
-  
   0 
