@@ -109,6 +109,7 @@ let main argv =
   printfn "%% of riders identifying as female: %A (%A%%)" numOfFemales ((float (numOfFemales*100))/float N)
   printfn ""
   printfn "Average age: %A" ( (float (totalge) )/float (N-zeros))
+  printfn ""
   printfn "** Ride Durations:" 
   printfn " 0..30 mins: %A (%A%%)" halfHourRides ((float (halfHourRides*100))/float N)
   printfn " 30..60 mins: %A (%A%%)" halfToHourRides ((float (halfToHourRides*100))/float N)
@@ -117,5 +118,5 @@ let main argv =
   printfn ""
   printfn "** Ride Start Time Histogram:"
   hourlyRides ridedata 0
-  printfn ""
+  
   0 
