@@ -57,7 +57,7 @@ let rec eachRider list counter gender age z sec hour =
     | e::tail when (counter = 5 && age > 0 && e = 0 && z = 1 && hour = -1) -> 1
     | e::tail when (counter = 4 && sec = 30 && (e >= 0 && e <= (30*60)) && hour = -1) -> 1
     | e::tail when (counter = 4 && sec = 60 && (e > (30*60) && e <= (60*60) )&& hour = -1) -> 1
-    | e::tail when (counter = 4 && sec = 120 && (e > (60*60) && e <= (120*60))&& hour = -1) -> 1
+    | e::tail when (counter = 4 && sec = 120 && (e > (60*60) && e <= (120*60))) -> 1
     | e::tail when (counter = 4 && sec = 180 && (e > (120*60) && e <= (24*60*60*60))&& hour = -1) -> 1
     | e::tail when (counter = 3 && e = hour) -> 1
     | e::tail -> eachRider tail (counter+1) gender age z sec hour
@@ -96,7 +96,7 @@ let main argv =
   let zeros = outterList ridedata -1 1 1 -1 -1
   let halfHourRides = outterList ridedata -1 -1 -1 30 -1
   let halfToHourRides = outterList ridedata -1 -1 -1 60 -1
-  let hourToTwoRides = outterList ridedata -1 -1 -1 120 -120
+  let hourToTwoRides = outterList ridedata -1 -1 -1 120 -1
   let moreThenTwoHourRides = outterList ridedata -1 -1 -1 180 -1
   
   
