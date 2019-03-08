@@ -117,4 +117,5 @@ let main argv =
   printfn ""
   printfn "** Ride Start Time Histogram:"
   hourlyRides ridedata 0
+  printfn ""
   0 
